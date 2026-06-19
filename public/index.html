@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My CV</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <div class="logo">Me Myself and I</div>
+
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#quests">Projects</a></li>
+        <li><a href="#stats">Skills</a></li>
+        <li><a href="#inventory">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HOME -->
+
+  <section class="hero section-bg hero-bg" id="hero">
+    <div class="container hero-content">
+      <div class="hero-subtitle">
+        Gabriel Wagner - 17 Years old<br><br>
+      </div>
+
+      <h1 class="hero-title">
+        S t u d e n t<br><br>F r o m<br><br>H T L<br><br>  S a l z b u r g
+      </h1>
+
+      <p class="hero-description">
+        Drummer and developer with a passion for building cool projects and learning new technologies.
+      </p>
+
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="#quests">View Projects</a>
+        <a class="btn btn-secondary" href="#contact">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="section-bg projects-bg" id="quests">
+    <div class="container">
+
+      <h2>Active Projects</h2>
+
+      <p>
+        Projects I have built or am currently developing.
+      </p>
+
+      <div class="grid grid-2">
+
+        <div class="card quest-card">
+          <div class="quest-title">
+            <h3>IntelliDrums</h3>
+            <span class="quest-level">5th Grade</span>
+          </div>
+
+          <p>
+            E-Drumset with a Unity App and Database (Django) Application.
+            <br><br>
+
+            - Built in Raspberry Pi Display with AUX-Ports and USB-Ports.
+            <br>
+
+            - Real-time Tracking System (rewrites the played rhythm into Tabs)
+            <br>
+
+            - Timing System with built in LEDs and a Songdatabase
+          </p>
+
+          <div class="tech-stack">
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">E-Drumset</span>
+            <span class="tech-tag">Raspberry Pi</span>
+          </div>
+        </div>
+
+        <div class="card quest-card">
+          <div class="quest-title">
+            <h3>Buehnentechnik</h3>
+            <span class="quest-level">4th Grade</span>
+          </div>
+
+          <p>
+            Unity Project where you can test Sound Systems for Concerts.
+            <br><br>
+
+            - Built in Unity with a custom Sound Engine and Editor.
+            <br>
+
+            - Real-time Reverb and Delay System.
+            <br>
+
+            - Custom Stage Builder for testing sound setups.
+          </p>
+
+          <div class="tech-stack">
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">Audio Programming</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+
+  <section class="section-bg skills-bg" id="stats">
+    <div class="container">
+
+      <h2>Skills</h2>
+
+      <div class="card">
+
+        <div class="stats">
+
+          <div class="stat">
+            <div class="stat-header">
+              <span>Main:</span>
+              <span>C, C#, Python, SQL</span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-header">
+              <span>Web Development:</span>
+              <span>HTML, CSS, Javascript</span>
+            </div>
+          </div>
+
+          <div class="stat">
+              <div class="stat-header">
+                <span>Other:</span>
+                <span>Django, ShellScripting, Git-Workflow</span>
+              </div>
+            </div>
+
+          <div class="stat">
+            <div class="stat-header">
+              <span>Operating Systems:</span>
+              <span>Windows: 10, 11 | Linux: Ubuntu, Debian, Kali, Arch, Pop!_OS</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+
+  <section class="section-bg achievements-bg" id="inventory">
+    <div class="container">
+
+      <h2>Achievements</h2>
+
+      <div class="grid grid-2">
+
+        <div class="card achievement">
+          <div class="achievement-icon">🏆</div>
+
+          <div class="achievement-text">
+            <strong>FortiNet - Certificate</strong>
+            <span>Network Security Certification</span>
+          </div>
+        </div>
+
+        <div class="card achievement">
+          <div class="achievement-icon">💻</div>
+
+          <div class="achievement-text">
+            <strong>Science Club Certificate</strong>
+            <span>Extracurricular Course</span>
+          </div>
+        </div>
+
+        <div class="card achievement">
+          <div class="achievement-icon">⚔️</div>
+
+          <div class="achievement-text">
+            <strong>Middle School Graduation with distinction</strong>
+            <span>Academic Excellence</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="section-bg contact-bg" id="contact">
+    <div class="container">
+
+      <h2>Contact</h2>
+
+      <div class="card">
+        <p>
+          Please contact me if you want to know more about my projects or if you have any questions.
+          I am always open for new opportunities and collaborations.
+        </p>
+
+        <a class="btn btn-primary" href="mailto:gabriel.wagner@sbg.at">
+          Send Message
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p class="footer-text">
+        © 2026 Gabriel Wagner. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
