@@ -77,10 +77,8 @@ body {
 body {
   background: var(--bg-900);
   color: var(--text);
-
   font-family: var(--font-body);
   line-height: 1.6;
-
   overflow-x: hidden;
 }
 
@@ -90,20 +88,16 @@ body {
 
 body::before {
   content: "";
-
   position: fixed;
   inset: 0;
-
   pointer-events: none;
   z-index: 999;
-
   background: repeating-linear-gradient(
     to bottom,
     transparent 0,
     transparent 2px,
     rgba(255, 255, 255, 0.015) 3px
   );
-
   opacity: 0.2;
 }
 
@@ -111,59 +105,34 @@ body::before {
    TYPOGRAPHY
 ========================================================== */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-
   font-family: var(--font-heading);
-
   line-height: 1.1;
-
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
-
   text-shadow:
     0 0 10px rgba(214, 40, 40, 0.35),
     0 0 24px rgba(214, 40, 40, 0.15);
 }
 
-h1 {
-  font-size: clamp(4rem, 10vw, 7rem);
-}
+h1 { font-size: clamp(4rem, 10vw, 7rem); }
+h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+h3 { font-size: 1.8rem; }
 
-h2 {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-}
+p { color: var(--text-muted); }
 
-h3 {
-  font-size: 1.8rem;
-}
-
-p {
-  color: var(--text-muted);
-}
-
-code,
-pre,
-.mono {
+code, pre, .mono {
   font-family: var(--font-mono);
 }
 
 a {
   color: var(--gold);
   text-decoration: none;
-
   transition: color var(--transition);
 }
 
-a:hover {
-  color: var(--accent-hover);
-}
+a:hover { color: var(--accent-hover); }
 
 ::selection {
   background: var(--accent);
@@ -181,48 +150,36 @@ a:hover {
 
 section {
   position: relative;
-
   padding: 7rem 0;
-
   overflow: hidden;
-
   scroll-margin-top: 100px;
 }
 
 /* ==========================================================
-   SECTION BACKGROUNDS
+   BACKGROUNDS
 ========================================================== */
 
-.section-bg::before {
+.section-bg::before,
+.section-bg::after {
   content: "";
-
   position: absolute;
   inset: 0;
+}
 
+.section-bg::before {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
   transform: scale(1.05);
-
   filter: brightness(0.25) grayscale(15%);
-
   z-index: 0;
 }
 
 .section-bg::after {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(9, 9, 11, 0.45),
-      rgba(9, 9, 11, 0.85)
-    );
-
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 11, 0.45),
+    rgba(9, 9, 11, 0.85)
+  );
   z-index: 1;
 }
 
@@ -231,35 +188,25 @@ section {
   z-index: 2;
 }
 
-/* ==========================================================
-IMAGE PATHS
-========================================================== */
-
+/* Images */
 .hero-bg::before {
   background-image: url("./images/SatWarmaster.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .projects-bg::before {
   background-image: url("./images/VampTutor.webp");
 }
 
-.skills-bg::before{
+.skills-bg::before {
   background-image: url("./images/Jordan.jpg");
 }
 
 .achievements-bg::before {
   background-image: url("./images/NicolBolas.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .contact-bg::before {
   background-image: url("./images/Slipknot.jpg");
-  
 }
 
 /* ==========================================================
@@ -282,13 +229,9 @@ IMAGE PATHS
 .navbar {
   position: sticky;
   top: 0;
-
   z-index: 1000;
-
   backdrop-filter: blur(18px);
-
   background: rgba(9, 9, 11, 0.75);
-
   border-bottom: 1px solid var(--border);
 }
 
@@ -296,32 +239,26 @@ IMAGE PATHS
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 1rem 0;
 }
 
 .logo {
   font-family: var(--font-heading);
   font-size: 2rem;
-
   letter-spacing: 0.1em;
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
-
   list-style: none;
-
   margin: 0;
   padding: 0;
 }
 
 .nav-links a {
   color: var(--text-muted);
-
   font-weight: 600;
-
   transition: color var(--transition);
 }
 
@@ -335,7 +272,6 @@ IMAGE PATHS
 
 .hero {
   min-height: 100vh;
-
   display: flex;
   align-items: center;
 }
@@ -346,24 +282,15 @@ IMAGE PATHS
 
 .hero-subtitle {
   color: var(--gold);
-
   font-family: var(--font-mono);
-
   letter-spacing: 0.15em;
   text-transform: uppercase;
-
   margin-bottom: 1rem;
-}
-
-.hero-title {
-  margin-bottom: 1.5rem;
 }
 
 .hero-description {
   max-width: 60ch;
-
   margin-bottom: 2rem;
-
   font-size: 1.2rem;
 }
 
@@ -374,48 +301,31 @@ IMAGE PATHS
 .btn {
   display: inline-flex;
   align-items: center;
-
   padding: 0.95rem 1.4rem;
-
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
-
   font-weight: 600;
-
   cursor: pointer;
-
-  transition:
-    transform var(--transition),
-    border-color var(--transition),
-    box-shadow var(--transition);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-}
+.btn:hover { transform: translateY(-3px); }
 
 .btn-primary {
   background: var(--accent);
   color: white;
-
   box-shadow: var(--shadow-accent);
 }
 
-.btn-primary:hover {
-  background: var(--accent-hover);
-}
+.btn-primary:hover { background: var(--accent-hover); }
 
 .btn-secondary {
   background: transparent;
-
   color: var(--text);
-
   border-color: var(--border-light);
 }
 
-.btn-secondary:hover {
-  border-color: var(--gold);
-}
+.btn-secondary:hover { border-color: var(--gold); }
 
 /* ==========================================================
    CARDS
@@ -423,70 +333,48 @@ IMAGE PATHS
 
 .card {
   background: var(--surface-1);
-
   backdrop-filter: blur(14px);
-
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-
   padding: 1.75rem;
-
   box-shadow: var(--shadow-md);
-
-  transition:
-    transform var(--transition),
-    border-color var(--transition);
+  transition: transform var(--transition), border-color var(--transition);
 }
 
 .card:hover {
   transform: translateY(-4px);
-
   border-color: var(--border-light);
 }
 
 /* ==========================================================
-   PROJECTS
+   QUEST CARDS
 ========================================================== */
 
 .quest-card {
   border-left: 4px solid var(--accent);
-
   position: relative;
   overflow: hidden;
 }
 
 .quest-card::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
-  background: linear-gradient(
-    135deg,
-    rgba(214, 40, 40, 0.06),
-    transparent 60%
-  );
-
-  pointer-events: none;
+  background: linear-gradient(135deg, rgba(214, 40, 40, 0.06), transparent 60%);
 }
 
 .quest-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin-bottom: 1rem;
 }
 
 .quest-level {
   padding: 0.25rem 0.75rem;
-
   border-radius: 999px;
-
   background: var(--accent-soft);
-
   color: var(--accent);
-
   font-family: var(--font-mono);
   font-size: 0.875rem;
 }
@@ -495,67 +383,16 @@ IMAGE PATHS
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-
   margin-top: 1rem;
 }
 
 .tech-tag {
   padding: 0.4rem 0.8rem;
-
   border: 1px solid var(--border);
-
   border-radius: 999px;
-
   background: rgba(255, 255, 255, 0.04);
-
   font-family: var(--font-mono);
-
   color: var(--text-muted);
-}
-
-/* ==========================================================
-   STATS
-========================================================== */
-
-.stats {
-  display: grid;
-  gap: 1rem;
-}
-
-.stat-header {
-  display: flex;
-  justify-content: space-between;
-
-  font-family: var(--font-mono);
-}
-/* ==========================================================
-   ACHIEVEMENTS
-========================================================== */
-
-.achievement {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.achievement-icon {
-  display: grid;
-  place-items: center;
-
-  width: 56px;
-  height: 56px;
-
-  border-radius: 50%;
-
-  background: var(--gold-soft);
-
-  color: var(--gold);
-
-  font-size: 1.5rem;
-}
-
-.achievement-text strong {
-  display: block;
 }
 
 /* ==========================================================
@@ -563,55 +400,36 @@ IMAGE PATHS
 ========================================================== */
 
 .terminal {
-  overflow: hidden;
-
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-
   background: rgba(5, 5, 5, 0.92);
-
   box-shadow: var(--shadow-md);
 }
 
 .terminal-header {
   display: flex;
   gap: 0.5rem;
-
   padding: 0.75rem 1rem;
-
   background: #111;
-
   border-bottom: 1px solid var(--border);
 }
 
 .terminal-dot {
   width: 12px;
   height: 12px;
-
   border-radius: 50%;
 }
 
-.terminal-dot:nth-child(1) {
-  background: #ef4444;
-}
-
-.terminal-dot:nth-child(2) {
-  background: #f59e0b;
-}
-
-.terminal-dot:nth-child(3) {
-  background: #22c55e;
-}
+.terminal-dot:nth-child(1) { background: #ef4444; }
+.terminal-dot:nth-child(2) { background: #f59e0b; }
+.terminal-dot:nth-child(3) { background: #22c55e; }
 
 .terminal-body {
   padding: 1.5rem;
-
   font-family: var(--font-mono);
 }
 
-.prompt {
-  color: var(--success);
-}
+.prompt { color: var(--success); }
 
 /* ==========================================================
    FOOTER
@@ -619,17 +437,13 @@ IMAGE PATHS
 
 footer {
   padding: 4rem 0;
-
   background: var(--bg-900);
-
   border-top: 1px solid var(--border);
-
   text-align: center;
 }
 
 .footer-text {
   color: var(--text-faint);
-
   font-family: var(--font-mono);
 }
 
@@ -647,7 +461,6 @@ footer {
 
 ::-webkit-scrollbar-thumb {
   background: var(--border-light);
-
   border-radius: 999px;
 }
 
@@ -656,17 +469,41 @@ footer {
 }
 
 /* ==========================================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 ========================================================== */
 
-@media (max-width: 768px) {
-  section {
-    padding: 5rem 0;
+/* Phones */
+@media (max-width: 480px) {
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2rem; }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 100%;
   }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card { padding: 1.2rem; }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+}
+
+/* Tablets & small screens */
+@media (max-width: 768px) {
+  section { padding: 5rem 0; }
 
   .hero {
     min-height: auto;
-    padding: 6rem 0;
+    padding: 5rem 0;
+    text-align: center;
   }
 
   .navbar-inner {
@@ -677,23 +514,46 @@ footer {
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
-
     gap: 1rem;
   }
 
-  .hero-title {
-    font-size: clamp(3rem, 16vw, 5rem);
+  .grid-2 {
+    grid-template-columns: 1fr;
   }
 
-  .container {
-    width: min(100% - 1.5rem, var(--max-width));
+  .quest-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 }
 
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section { padding: 6rem 0; }
+}
+
+/* Small laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero-content { max-width: 900px; }
+}
+
+/* Large screens */
+@media (min-width: 1441px) {
+  :root { --max-width: 1400px; }
+
+  section { padding: 9rem 0; }
+
+  h1 { font-size: 7.5rem; }
+}
+
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
